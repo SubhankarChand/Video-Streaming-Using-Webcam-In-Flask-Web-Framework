@@ -45,9 +45,6 @@ Before running the project, ensure you have the following installed:
     http://127.0.0.1:5000
     ```
 
-## Project Structure
-
-Video-Streaming-Using-Webcam-In-Flask-Web-Framework/ │ ├── templates/ │ └── index.html # HTML template for displaying the video stream ├── app.py # Main application file for Flask ├── requirements.txt # Python dependencies └── README.md # Project documentation
 
 
 
