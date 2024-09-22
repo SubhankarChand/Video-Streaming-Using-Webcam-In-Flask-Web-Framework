@@ -1,16 +1,16 @@
 # Video Streaming Using Webcam in Flask Web Framework
 
-This project demonstrates how to implement real-time video streaming using a webcam within a Flask web application. It captures video frames from the user's webcam and streams them through a web interface in real time. This setup is built using Python, Flask, and OpenCV for capturing and encoding the video feed.
+This project demonstrates a simple and effective way to implement real-time video streaming using a webcam within a Flask web application. By leveraging Python, Flask, and OpenCV, the application captures video from your webcam and streams it directly through a web interface in real time.
 
 ## Features
 
-- **Real-time video streaming**: The webcam feed is streamed live in the browser using Flask and OpenCV.
-- **Efficient frame handling**: Frames are captured, encoded, and served with optimized performance.
-- **Simple and lightweight**: This project provides a minimal, easy-to-understand implementation, ideal for beginners.
+- **Real-time video streaming**: Live webcam feed streamed directly to a web browser using Flask.
+- **Optimized performance**: Efficient frame handling with OpenCV for smooth video output.
+- **Lightweight and simple**: Minimalistic code, ideal for beginners and easy to integrate with other projects.
 
 ## Prerequisites
 
-Before running the project, ensure you have the following installed:
+To run this project, ensure you have the following installed:
 
 - Python 3.x
 - Flask (`pip install flask`)
@@ -21,7 +21,7 @@ Before running the project, ensure you have the following installed:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/yourusername/Video-Streaming-Using-Webcam-In-Flask-Web-Framework.git
+    git clone https://github.com/SubhankarChand/Video-Streaming-Using-Webcam-In-Flask-Web-Framework.git
     cd Video-Streaming-Using-Webcam-In-Flask-Web-Framework
     ```
 
@@ -46,22 +46,30 @@ Before running the project, ensure you have the following installed:
     ```
 
 
-
-
 ## Code Explanation
 
 1. **Webcam Capture**:
-   - The `cv2.VideoCapture(0)` command is used to access the system's webcam.
+   - The `cv2.VideoCapture(0)` command accesses the system's webcam.
    
 2. **Frame Generation**:
-   - Frames are continuously read from the webcam, encoded as JPEGs, and then sent as part of an HTTP response using Flask's `Response` object.
-
+   - The `generate_frames()` function reads frames from the webcam, encodes them as JPEGs, and streams them using Flask’s `Response` object.
+   
 3. **Video Streaming**:
-   - The `generate_frames()` function yields frames in a format compatible with HTML5 video streams.
-   - The `/video` route serves the video feed, while the `/` route renders the homepage template (`index.html`).
+   - The `/video` route streams the video feed using a multipart HTTP response, while the `/` route renders the homepage (`index.html`).
 
 ## Example Output
 
-You should see the live video stream from your webcam in the browser.
+When you access the web application, you will see the live video feed from your webcam in your browser.
+
+## Contributing
+
+Contributions are welcome! If you'd like to improve this project, feel free to submit a pull request.
+
+
+
+### Author
+
+Developed by [Subhankar Chand](https://github.com/SubhankarChand).
+
 
 
